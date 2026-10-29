@@ -11,12 +11,6 @@
             "App\\": "app/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "file:///tmp/elang-release-trees-final/.build"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {

@@ -1,0 +1,39 @@
+{
+    "name": "elang/elang",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "elang/framework": "^0.1@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "file:///tmp/elang-release-trees-20261029/.build"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": false,
+        "sort-packages": true
+    },
+    "description": "A clean Elang PHP application skeleton.",
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php elang key:generate",
+            "@php elang platform:setup",
+            "@php elang doctor"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    }
+}
